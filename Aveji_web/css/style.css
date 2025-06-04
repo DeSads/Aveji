@@ -1,0 +1,518 @@
+/* import reboot file */
+
+@import url(../css/nullstyle.min.css);
+
+/*=========== TABLE OF CONTENTS ===========
+    1.General style
+    2.Mobile:
+        a)Exclusive block
+        b)About
+        c)Steps
+        d)Projects
+        e)Testimonials
+        f)Form
+        g)Footer
+        h)Burger menu
+    3.Desktop:
+        a)Exclusive block
+        b)About
+        c)Steps
+        d)Projects
+        e)Testimonials
+        f)Form
+        g)Footer
+==========================================*/
+
+/*=============Style css=========*/
+
+/*-------------------------------------
+          1.General style
+--------------------------------------*/
+
+/* colors */
+
+:root{
+    --color1:#101828;
+    --color2:#DDD7C0;
+    --color3:#E13A3A;
+    --color4:#F9C67B;
+    --color5:#212529;
+    --m1: 2vh;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "Helvetica"; 
+    src: url("../fonts/Helvetica.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    font-family: "Roboto"; 
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+    font-family: "Helvetica-Bold"; 
+    src: url("../fonts/Helvetica-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+/* typography */
+
+h1,h2,h3,h4,p{
+    color:var(--color1);
+}
+h1,h2,h3,h4{
+    font-family: 'Helvetica';
+    font-weight: 500;
+}
+h4{font-size: 18px}
+p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 140%;
+}
+.exclusive__text h1 {text-transform: uppercase;}
+.form__input::placeholder, .form__input{
+    color: var(--color5); 
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.footer__content .footer__social a, .footer__content p {
+    color: var(--color5); 
+    font-size: 18px; 
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+.footer__docs a{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: var(--color5);
+}
+
+/* container */
+
+.container{
+    margin: 0 auto;
+}
+
+/* buttons */
+
+.exclusive__button{
+    color: var(--color1);
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: var(--color1) solid 1px;
+    background-color: #fff;
+    box-shadow: none;
+    padding-bottom: 2px;
+}
+
+/* arrow button */
+
+.arrow-button{
+    height: 12px;
+    width: 12px;
+    margin-top: 5px;
+    cursor:pointer;
+}
+
+/* info */
+
+.project-slider__info{
+    position: relative;
+    z-index: 2;
+    background-color: rgba(33, 37, 41, 0.5); 
+    display: flex;
+    justify-content: space-between;
+}
+
+/* testimonials cards */
+
+.card-text h4, .card-text p{text-align: center;}
+.card-text h4{font-weight: bold; margin: 32px 0 20px 0;}
+.card {
+    border: black solid 1px; 
+}
+.card-logo{
+    width: 32px; 
+    height: 32px; 
+    margin: 0 auto;
+}
+
+/* form button */
+
+.form__content button{
+    background-color: var(--color5);
+    text-align: center; 
+    color: white; 
+    font-family: 'Roboto';font-size: 16px;
+    margin: 20px 0 28px 0;
+}
+
+
+/*-------------------------------------
+            2.Mobile
+--------------------------------------*/
+
+@media(max-width: 375px){
+    
+    /* typography */
+    
+    h1{font-size: 32px;}
+    h2{font-size: 28px;}
+    h3{font-size: 24px;}
+    h4{font-size: 18px}
+    p{font-size: 16px;}
+
+    /* container */
+
+    .container{max-width: 343px;}
+
+    /* header */
+
+    .header__content{
+        display: flex;
+        justify-content: space-between;
+        margin: 2vh auto;
+    }
+    .header__burger{margin-top: 10px;}
+
+/*-------------------------------------
+        a)Exclusive block
+--------------------------------------*/
+
+    .exclusive{margin-bottom: 2vh;}
+    .exclusive__text h1{line-height: 120%; margin-bottom: 3vh;}
+    .exclusive__text p{line-height: 140%; margin-bottom: 3vh;}
+    .ecxlusive__image img{margin: 3vh auto; }
+
+/*-------------------------------------
+        b)About
+--------------------------------------*/
+
+    .about__content h2{margin: 4vh 0 3vh 0; }
+    .about__main-text{margin-bottom: 4.5vh;}
+    .about__column-text{max-width: 161px;}
+    .about__column-text p{margin-bottom: 2.4vh;}
+
+/*-------------------------------------
+        c)Steps
+--------------------------------------*/
+
+    .steps__content h2{margin: 6vh 0 3vh;}
+    .steps__block{border-bottom: solid black 1px;max-width: 341px;}
+    .steps__block h3{margin: 2.4vh 0 3vh 0;}
+    .steps__block p{padding-bottom: 2.4vh;}
+    .steps__block:nth-child(4) h3{margin-bottom: 0;}
+
+/*-------------------------------------
+        d)Projects
+--------------------------------------*/
+
+    /* project content */
+
+    .projects__content{margin-top: 6vh;}
+    .projects__content h2{margin-bottom: 2.4vh;}
+    
+    /* project slider */
+    
+    .projects-slider__img img{min-width: 252px; min-height: 328px;}
+    .projects-slider__img{margin-right: 2.4vh; z-index: 1;position: relative;}
+    .projects-slider{
+        display: flex; 
+        overflow: scroll; 
+        margin-left: 2.2vh;
+        scrollbar-width: none;
+    }
+
+    /* info */
+
+    .project-slider__info p{font-size: 16px; color: white;}
+    .project-slider__info{
+        position: relative;
+        z-index: 2;
+        background-color: rgba(33, 37, 41, 0.5); 
+        width: 252px;
+        height: 44px;
+        margin-top: -44px;
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 12px;
+    }
+
+
+/*-------------------------------------
+        e)Testimonials
+--------------------------------------*/
+
+    /* testimonials content */
+
+    .testimonials__content {margin-top: 6vh; }
+    .testimonials__content h2 {margin-bottom: 3vh;}
+    
+    /* testimonials card */
+
+    .card-text p{min-width: 278px;}
+    .card {
+        width: 100%; 
+        height: 332px;
+        padding: 32px 36px;
+        margin-bottom: 1.5vh;
+    }
+
+/*-------------------------------------
+        f)Form
+--------------------------------------*/
+
+    .form__content{margin-top: 36px; }
+    .form__text p{margin: 20px 0 39px 0;}
+    .appstore {margin-right: 5px; }
+    .form__input{
+        min-width: 100%; 
+        border-bottom: solid var(--color5) 1px;
+        height: 32px;
+        margin-top: 16px;
+    }
+    .form__content button{
+        width: 176px;
+        height: 46px;
+        margin: 20px 0 28px 0;
+    }
+
+/*-------------------------------------
+        g)Footer
+--------------------------------------*/
+
+    .footer__content{margin: 60px auto auto auto; max-width: 241px;}
+    .footer__docs{text-align: center;}
+    .footer__docs :nth-child(2){line-height: 300%;}
+    .footer__content p {text-align: center; margin: 28px auto;}
+    .footer__social{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+    .footer__docs span{visibility:hidden;}
+
+
+/*-------------------------------------
+          h)Burger menu
+--------------------------------------*/
+
+    /* burger */
+
+    .header__burger {cursor: pointer; display: inline-block;}
+    .line {
+        height: 1px;
+        width: 24px; 
+        background-color: #000;
+    }
+    .line--center{margin: 6px auto; }
+    .line--bottom {width: 14px; margin-left:10px;}
+    
+    /* content */
+
+    .header__menu-content {display: none;}
+    .header__menu-info ul{margin: 10px 0;}
+    .header__menu-info a, .header__menu-phone{
+        color: var(--color5); 
+        font-size: 16px; 
+        font-family: 'Roboto';
+    }
+}
+
+/*-------------------------------------
+        2.Desktop
+--------------------------------------*/
+
+@media(min-width: 376px){
+
+    /* typography */
+
+    h1{font-size: 72px;}
+    h2{font-size: 48px;}
+    h3{font-size: 36px;}
+    p{font-size: 16px;}
+
+    /* container */
+
+    .container{max-width: 1376px;} 
+
+    /* header */
+
+    .header__content {display: flex;justify-content: space-between;}
+
+    /* menu content */
+
+    .header__menu-content ul{margin-bottom: 8px;}
+    .header__menu-info{margin-right: 10vw; }
+    .header__logo{margin: 5px 0 2vh 0;}
+    .header__menu-content{
+        display: flex; 
+        justify-content: space-between;
+        margin: 12px 0 2vh 0;
+    }
+    .header__menu-content a{
+        color: var(--color5);
+        font-family: 'Roboto';
+        font-size: 18px;
+    }
+
+/*-------------------------------------
+        a)Exclusive block
+--------------------------------------*/
+    
+    .exclusive__text h1 {max-width: 794px; margin-bottom: 4vh;}
+    .exclusive__text p {max-width: 445px; font-size: 20px;}
+    .exclusive__content {
+        display: grid;
+        align-items: end;
+        justify-content: space-between;
+        grid-template-areas: 
+        "e-text e-text btn"
+        "michael spacejoy spacejoy";
+    }
+
+    /* grid items */
+
+    .exclusive__text{grid-area: e-text;}
+    .ecxlusive__image--spacejoy{grid-area: spacejoy; margin-left:20vw;}
+    .ecxlusive__image--michael{grid-area: michael;}
+    .exclusive__button{
+        grid-area: btn; 
+        height: 23px; 
+        width: 164px;
+        margin-bottom: 3vh;
+    }
+
+/*-------------------------------------
+        b)About
+--------------------------------------*/
+
+    /* column text */
+    
+    .about__column-text h3{margin: 1vh 0;}
+    .about__column-text{max-width: 146px; grid-area: col;}
+    
+    /* main text */
+    
+    .about__main-text{max-width: 562px; margin-bottom: 5vh; grid-area: a-text; }
+    .about__title {max-width: 562px; grid-area: title;}
+    
+    /* content */
+
+    .about__content{
+        display: grid;
+        margin: 10vh 0;
+        column-gap: 1.5rem;
+        grid-template-areas: 'title a-text'
+                             '. col';
+    }
+
+/*-------------------------------------
+        c)Steps
+--------------------------------------*/
+
+    .steps__block p{max-width: 328px;}
+    .steps__block h3{line-height: 130%;}
+    .steps__content {
+        display: grid; 
+        grid-template-areas: 'title s-text'
+                             '. s-block';
+        column-gap: 19.2rem;
+    }
+    .steps__block{
+        display: flex; 
+        justify-content: space-between;
+        border-bottom: 1px solid black; 
+        padding-bottom: 2vh;
+        margin-top: 3vh;
+    }
+
+    /* grid items */
+
+    .steps__blocks {max-width: 678px; grid-area: s-block; }
+    .steps__title{grid-area: title;}
+    .steps__text{max-width:325px; grid-area: s-text;}
+
+/*-------------------------------------
+        d)Projects
+--------------------------------------*/
+
+    .projects{margin: 10vh 0;}
+    .projects-slider__img img{min-height: 580px; min-width: 445px }
+    .project-slider__info p{font-size: 16px; color: white;}
+    .project-slider__info{
+        width: 445px;
+        height: 66px;
+        margin-top: -66px;
+        padding: 22px 20px;   
+    }
+    .projects-slider {
+        max-width: 1376px; 
+        margin: 2vh auto 0 auto;  
+        display: grid; 
+        grid-template-columns: 33% 33% 33%;
+        row-gap: 1vh;
+    }
+
+/*-------------------------------------
+        e)Testimonials
+--------------------------------------*/
+
+    .testimonials__content h2{margin: 4vh 0;  }
+    .testimonials-cards{display: flex; justify-content: space-between;}
+    .card-text p{max-width: 365px;}
+    .card {
+        max-width: 445px; 
+        max-height: 327px; 
+        padding: 40px 32px 60px 32px;
+    }
+
+/*-------------------------------------
+        g)Form
+--------------------------------------*/
+
+    .form{margin: 10vh 0;}
+    .form__content{display: flex;}
+    .form__picture img{min-width: 100%; min-height: 100%; }
+    .form-inputs{max-width: 678px; margin-left: 136px;}
+    .form__text p{margin: 3vh 0 7vh 0; }
+    .form__apps {margin-top: 1vh;}
+    .form__input {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid var(--color5);
+        padding: 1.5vh 0;
+        margin: 1vh 0;
+    }
+    .form__content button{
+        width: 176px;
+        height: 46px;
+    }
+
+/*-------------------------------------
+        h)Footer
+--------------------------------------*/
+
+    .footer__content {
+        display: grid; 
+        grid-template-areas: 'f-text docs social';
+        column-gap: 17%;
+        margin: 5vh 0 2vh 0;
+        align-items: end;
+        
+    }
+
+    /* grid items */
+
+    .footer__social {grid-area: social;}
+    .footer__social a{margin-left: 40px;}
+    .footer__docs { grid-area: docs;}
+    .footer__docs span{font-family: 'Roboto'; font-size: 16px; color: var(--color5);}
+    .footer__content p{grid-area: f-text;}
+
+}
