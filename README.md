@@ -7,8 +7,9 @@
 - Figma(работа с макетом)
 
 ## Скриншоты 
-![изображение](https://github.com/user-attachments/assets/20421707-15ca-41cf-b062-59fa4d1b733b)
-![изображение](https://github.com/user-attachments/assets/b0acb707-651b-47ed-8b29-37879e6e5686)
+![изображение](https://github.com/user-attachments/assets/44eced6a-0511-44d3-962f-7de1aa6fc31c)
+![изображение](https://github.com/user-attachments/assets/61146f28-0256-4e5e-a724-10e2372b49de)
+
 
 ## Установка 
 '''bash
