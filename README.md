@@ -11,8 +11,9 @@
 ![изображение](https://github.com/user-attachments/assets/44eced6a-0511-44d3-962f-7de1aa6fc31c)
 
 ## Установка 
-'''bash
+```bash
 git clone https://github.com/DeSads/Aveji.git
 cd Aveji
 npm install
 npm start
+```
