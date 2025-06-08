@@ -4,7 +4,8 @@
 
 ## Стек технологий
 - HTML, CSS, JavaScript
-- Figma(работа с макетом)
+- Figma (работа с макетом)
+- Vite 
 
 ## Скриншоты 
 ![изображение](https://github.com/user-attachments/assets/61146f28-0256-4e5e-a724-10e2372b49de)
