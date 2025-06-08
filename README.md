@@ -13,7 +13,7 @@
 ## Установка 
 ```bash
 git clone https://github.com/DeSads/Aveji.git
-cd Aveji
+cd Aveji/Aveji_web
 npm install
-npm start
+npm run dev
 ```
